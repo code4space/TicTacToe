@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins';
+}
+
+.App {
+  text-align: center;
+  background-color: rgb(22, 22, 22);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.status {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: white;
+  text-shadow: 0 0 3px #1d2ac2,
+    0 0 10px #3c47c2,
+    0 0 40px #656fde;
+}
+
+.board {
+  display: flex;
+  flex-wrap: wrap;
+  width: 310px;
+  margin: 0 auto;
+  gap: 20px;
+}
+
+.square-container {
+  width: 90px;
+  height: 90px;
+}
+
+.square {
+  width: 100%;
+  height: 100%;
+  font-size: 24px;
+  border: 2px solid #d0dfff;
+  box-shadow: 0 0 5px #00b3ff,
+    0 0 15px #00b3ff,
+    0 0 40px #00b3ff,
+    inset 0 0 2px #00b3ff,
+    inset 0 0 4px #00b3ff,
+    inset 0 0 8px #00b3ff;
+  background-color: transparent;
+  cursor: pointer;
+  border-radius: 10px;
+  color: white;
+  transition: 0.3s all ease;
+}
+
+.square p {
+  text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 30px #00b3ff;
+}
+
+.blink {
+  animation: blink 3s linear 0s infinite;
+}
+
+@keyframes blink {
+  0% {
+    box-shadow: 0 0 5px #00b3ff,
+      0 0 15px #00b3ff,
+      0 0 40px #00b3ff,
+      inset 0 0 2px #00b3ff,
+      inset 0 0 4px #00b3ff,
+      inset 0 0 8px #00b3ff;
+  }
+
+  12.5% {
+    box-shadow: none
+  }
+
+  15% {
+    box-shadow: 0 0 5px #00b3ff,
+      0 0 15px #00b3ff,
+      0 0 40px #00b3ff,
+      inset 0 0 2px #00b3ff,
+      inset 0 0 4px #00b3ff,
+      inset 0 0 8px #00b3ff;
+  }
+
+  17.5% {
+    box-shadow: none
+  }
+
+  22.5% {
+    box-shadow: 0 0 5px #00b3ff,
+      0 0 15px #00b3ff,
+      0 0 40px #00b3ff,
+      inset 0 0 2px #00b3ff,
+      inset 0 0 4px #00b3ff,
+      inset 0 0 8px #00b3ff;
+  }
+
+  100% {
+    box-shadow: 0 0 5px #00b3ff,
+      0 0 15px #00b3ff,
+      0 0 40px #00b3ff,
+      inset 0 0 2px #00b3ff,
+      inset 0 0 4px #00b3ff,
+      inset 0 0 8px #00b3ff;
+  }
+}
+
+.X {
+  box-shadow: 0 0 5px #ff3254,
+    0 0 15px #ff002b,
+    0 0 40px #ff002b;
+
+  background-color: #ff002b;
+}
+
+.X p {
+  text-shadow: 0 0 5px #a1001b,
+    0 0 15px #a1001b,
+    0 0 40px #a1001b;
+}
+
+.O {
+  box-shadow: 0 0 5px #ff6200,
+    0 0 15px #ff6200,
+    0 0 40px #ff6200;
+
+  background-color: #ff6200;
+}
+
+.O p {
+  text-shadow: 0 0 5px #a14b00,
+    0 0 15px #a14b00,
+    0 0 40px #a14b00;
+}
+
+.placeholder:hover {
+  box-shadow: 0 0 5px #00ff80,
+    0 0 15px #00ff80,
+    0 0 40px #00ff80,
+    inset 0 0 2px #00ff80,
+    inset 0 0 4px #00ff80,
+    inset 0 0 8px #00ff80;
+}
+
+.placeholder:hover p {
+  text-shadow: 0 0 10px #00ff80,
+    0 0 20px #00ff80,
+    0 0 30px #00ff80;
+  ;
+}
+
+.draw {
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(10px);
+  background-color: rgba(0, 0, 0, 0.704);
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.draw h1 {
+  text-shadow: 0 0 10px #00b3ff,
+  0 0 20px #00b3ff,
+  0 0 30px #00b3ff;
+  color: white;
+  font-size: 100px;
+  animation: blinkText 3s linear 0s infinite;
+}
+
+@keyframes blinkText {
+  0% {
+    text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 30px #00b3ff;
+  }
+
+  12.5% {
+    text-shadow: none
+  }
+
+  15% {
+    text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 30px #00b3ff;
+  }
+
+  17.5% {
+    text-shadow: none
+  }
+
+  22.5% {
+    text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 30px #00b3ff;
+  }
+
+  100% {
+    text-shadow: 0 0 10px #00b3ff,
+    0 0 20px #00b3ff,
+    0 0 30px #00b3ff;
+  }
+}
+
+
+.reset-button {
+  font-size: 16px;
+  padding: 8px 16px;
+  margin-top: 20px;
+  border: none;
+  background-color: transparent;
+  border: 2px solid #b8e1f2;
+  color: #fff;
+  cursor: pointer;
+  transition: 0.5s all ease;
+  font-weight: 600;
+  -webkit-box-reflect: below 0px linear-gradient(transparent, rgba(0, 0, 0, 0.1));
+}
+
+.reset-button:hover {
+  color: rgba(0, 0, 0, 0.631);
+  border: 2px solid #0f0;
+  background-color: #0f0;
+  box-shadow: 0 0 10px #0f0,
+  0 0 20px #0f0,
+  0 0 40px #0f0;
+}
+
+.copyright {
+  position: absolute;
+  bottom: 10px;
+  color: rgb(75, 75, 75);
+  max-width: 90%;
+  text-align: center;
+}
+
+@media only screen and (max-width: 460px) {
+  .board {
+    width: 170px;
+    gap: 10px;
+  }
+  
+  .square-container {
+    width: 50px;
+    height: 50px;
+  }
+}
