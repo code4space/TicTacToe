@@ -67,82 +67,62 @@ body {
     0 0 30px #00b3ff;
 }
 
-.blink {
-  animation: blink 3s linear 0s infinite;
-}
-
 @keyframes blink {
   0% {
-    box-shadow: 0 0 5px #00b3ff,
-      0 0 15px #00b3ff,
-      0 0 40px #00b3ff,
-      inset 0 0 2px #00b3ff,
-      inset 0 0 4px #00b3ff,
-      inset 0 0 8px #00b3ff;
+    opacity: 1;
   }
 
   12.5% {
-    box-shadow: none
+    opacity: 0;
   }
 
   15% {
-    box-shadow: 0 0 5px #00b3ff,
-      0 0 15px #00b3ff,
-      0 0 40px #00b3ff,
-      inset 0 0 2px #00b3ff,
-      inset 0 0 4px #00b3ff,
-      inset 0 0 8px #00b3ff;
+    opacity: 1;
   }
 
   17.5% {
-    box-shadow: none
+    opacity: 0;
   }
 
   22.5% {
-    box-shadow: 0 0 5px #00b3ff,
-      0 0 15px #00b3ff,
-      0 0 40px #00b3ff,
-      inset 0 0 2px #00b3ff,
-      inset 0 0 4px #00b3ff,
-      inset 0 0 8px #00b3ff;
+    opacity: 1;
   }
 
   100% {
-    box-shadow: 0 0 5px #00b3ff,
-      0 0 15px #00b3ff,
-      0 0 40px #00b3ff,
-      inset 0 0 2px #00b3ff,
-      inset 0 0 4px #00b3ff,
-      inset 0 0 8px #00b3ff;
+    opacity: 1;
   }
 }
 
 .X {
-  box-shadow: 0 0 5px #ff3254,
-    0 0 15px #ff002b,
-    0 0 40px #ff002b;
+  box-shadow: 0 0 5px #f10d33,
+    0 0 15px #f10d33,
+    0 0 40px #f10d33;
 
-  background-color: #ff002b;
+  background-color: #f10d33;
+  border: none;
 }
 
 .X p {
-  text-shadow: 0 0 5px #a1001b,
-    0 0 15px #a1001b,
-    0 0 40px #a1001b;
+  color: rgb(22, 22, 22);
+  text-shadow: none;
+  font-weight: bold;
+  font-size: 30px;
 }
 
 .O {
-  box-shadow: 0 0 5px #ff6200,
-    0 0 15px #ff6200,
-    0 0 40px #ff6200;
+  box-shadow: 0 0 5px #ff7d2c,
+    0 0 15px #ff7d2c,
+    0 0 40px #ff7d2c;
 
-  background-color: #ff6200;
+    background-color: #ff7d2c;
+    border: none;
 }
 
 .O p {
-  text-shadow: 0 0 5px #a14b00,
-    0 0 15px #a14b00,
-    0 0 40px #a14b00;
+  text-shadow: none;
+  font-size: 30px;
+  color: rgb(22, 22, 22);
+  font-weight: bold;
 }
 
 .placeholder:hover {
@@ -178,8 +158,8 @@ body {
 
 .draw h1 {
   text-shadow: 0 0 10px #00b3ff,
-  0 0 20px #00b3ff,
-  0 0 30px #00b3ff;
+    0 0 20px #00b3ff,
+    0 0 30px #00b3ff;
   color: white;
   font-size: 100px;
   animation: blinkText 3s linear 0s infinite;
@@ -188,8 +168,8 @@ body {
 @keyframes blinkText {
   0% {
     text-shadow: 0 0 10px #00b3ff,
-    0 0 20px #00b3ff,
-    0 0 30px #00b3ff;
+      0 0 20px #00b3ff,
+      0 0 30px #00b3ff;
   }
 
   12.5% {
@@ -198,8 +178,8 @@ body {
 
   15% {
     text-shadow: 0 0 10px #00b3ff,
-    0 0 20px #00b3ff,
-    0 0 30px #00b3ff;
+      0 0 20px #00b3ff,
+      0 0 30px #00b3ff;
   }
 
   17.5% {
@@ -208,14 +188,14 @@ body {
 
   22.5% {
     text-shadow: 0 0 10px #00b3ff,
-    0 0 20px #00b3ff,
-    0 0 30px #00b3ff;
+      0 0 20px #00b3ff,
+      0 0 30px #00b3ff;
   }
 
   100% {
     text-shadow: 0 0 10px #00b3ff,
-    0 0 20px #00b3ff,
-    0 0 30px #00b3ff;
+      0 0 20px #00b3ff,
+      0 0 30px #00b3ff;
   }
 }
 
@@ -239,8 +219,8 @@ body {
   border: 2px solid #0f0;
   background-color: #0f0;
   box-shadow: 0 0 10px #0f0,
-  0 0 20px #0f0,
-  0 0 40px #0f0;
+    0 0 20px #0f0,
+    0 0 40px #0f0;
 }
 
 .copyright {
@@ -256,9 +236,15 @@ body {
     width: 170px;
     gap: 10px;
   }
-  
+
   .square-container {
     width: 50px;
     height: 50px;
   }
+}
+
+
+
+.blink {
+  animation: blink 3s linear 0s infinite;
 }
