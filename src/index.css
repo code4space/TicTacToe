@@ -96,26 +96,41 @@ body {
 .X {
   box-shadow: 0 0 5px #f10d33,
     0 0 15px #f10d33,
-    0 0 40px #f10d33;
-
-  background-color: #f10d33;
-  border: none;
+    0 0 40px #f10d33,
+    inset 0 0 2px #f10d33,
+    inset 0 0 4px #f10d33,
+    inset 0 0 8px #f10d33;
 }
 
 .X p {
-  color: rgb(22, 22, 22);
-  text-shadow: none;
-  font-weight: bold;
-  font-size: 30px;
+  text-shadow: 0 0 10px #f10d33,
+  0 0 20px #f10d33,
+  0 0 30px #f10d33;
 }
 
 .O {
   box-shadow: 0 0 5px #ff7d2c,
     0 0 15px #ff7d2c,
+    0 0 40px #ff7d2c,
+    inset 0 0 2px #ff7d2c,
+    inset 0 0 4px #ff7d2c,
+    inset 0 0 8px #ff7d2c;
+}
+
+.O p {
+  text-shadow: 0 0 10px #ff7d2c,
+  0 0 20px #ff7d2c,
+  0 0 30px #ff7d2c;
+}
+
+/* if you more preffered to fill the background then yes :)
+.O {
+  box-shadow: 0 0 5px #ff7d2c,
+    0 0 15px #ff7d2c,
     0 0 40px #ff7d2c;
 
-    background-color: #ff7d2c;
-    border: none;
+  background-color: #ff7d2c;
+  border: none;
 }
 
 .O p {
@@ -123,7 +138,7 @@ body {
   font-size: 30px;
   color: rgb(22, 22, 22);
   font-weight: bold;
-}
+} */
 
 .placeholder:hover {
   box-shadow: 0 0 5px #00ff80,
